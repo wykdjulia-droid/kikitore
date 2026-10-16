@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Daily Listening</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&display=swap"><style id="css">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Kiki Tore</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Teko:wght@400;500;600&display=swap"><style id="css">
 :root{--bg:#eaf1f6;--ink:#14283a;--card:#fff;--line:#c5d4df;--acc:#f2b705;--ok:#16794f;--warn:#a85f00;--bad:#c0392b;--mut:#4d6579;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a25;--ink:#e8f0f6;--card:#162636;--line:#2b4256;--ok:#4cc38a;--warn:#f0b04a;--bad:#ff7a6b;--mut:#9bb2c3}}
@@ -54,15 +54,42 @@ textarea{width:100%;min-height:96px;font:inherit;font-size:18px;color:var(--ink)
 input[type=text]{width:100%;font:inherit;padding:10px;border:2px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);margin:4px 0 12px}
 label{font-weight:700;font-size:15px}
 .pics{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pic{padding:0;border:3px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg);cursor:pointer;aspect-ratio:1}.pic img{width:100%;height:100%;object-fit:cover;display:block}.pic.ok{border-color:var(--ok)}.pic.bad{border-color:var(--bad);opacity:.5}
+:root:root:root{color-scheme:dark;--bg:#7a14b8;--ink:#eaf8ff;--card:rgba(255,255,255,.04);--line:rgba(255,255,255,.6);--acc:#38d6ff;--ok:#5cffb0;--warn:#ffd166;--bad:#ff7a9c;--mut:#e2ccff}
+html{background:#5a24bd}
+body{background:linear-gradient(180deg,#a60bba 0%,#8a14b8 42%,#5a24bd 100%) fixed;min-height:100vh;font-family:'Teko','Oswald','Arial Narrow',system-ui,sans-serif;font-weight:500;font-size:21px;letter-spacing:.04em;line-height:1.25}
+h1{display:flex;flex-direction:column;line-height:.85;margin:0;font-family:'Orbitron','Teko',sans-serif;text-transform:uppercase}
+.k1{font-size:25px;letter-spacing:.22em;font-weight:700;color:#74a9ff;text-shadow:0 0 10px rgba(110,170,255,.7)}
+.k2{font-size:56px;font-weight:900;letter-spacing:.04em;color:#9a6cff;text-shadow:0 0 16px rgba(154,108,255,.7)}
+header{align-items:flex-start}
+#meta{color:#ff8fca;text-shadow:0 0 10px rgba(255,70,170,.85);font-size:24px;text-transform:uppercase}
+#play{width:116px;height:116px;background:radial-gradient(circle at 50% 28%,rgba(130,225,255,.45),rgba(30,70,210,.4) 62%,rgba(10,20,120,.55));border:3px solid #38d6ff;box-shadow:0 0 16px #1ec8ff,0 0 44px rgba(30,150,255,.75),inset 0 0 22px rgba(90,225,255,.65)}
+#play .tri{position:relative;border:0;width:44px;height:50px;margin-left:8px;background:#38d6ff;clip-path:polygon(0 0,100% 50%,0 100%)}
+#play .tri::after{content:'';position:absolute;inset:6px 10px 6px 4px;background:#17389f;clip-path:polygon(0 0,100% 50%,0 100%)}
+#play .bars i{background:#38d6ff;box-shadow:0 0 8px #38d6ff}
+.slow{background:linear-gradient(90deg,rgba(70,50,230,.6),rgba(90,60,230,.25) 50%,rgba(70,50,230,.6));border:2px solid rgba(130,170,255,.85);color:#e6f8ff;font:inherit;font-size:23px;text-transform:uppercase;letter-spacing:.08em;padding:2px 34px;min-height:44px;text-shadow:0 0 6px #38d6ff,0 0 14px rgba(30,144,255,.8);box-shadow:0 0 12px rgba(90,130,255,.7)}
+.slow[aria-pressed=true]{background:rgba(56,214,255,.3);border-color:#38d6ff;color:#fff}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.01));border:2px solid rgba(255,255,255,.9);border-radius:36px;padding:22px;box-shadow:0 0 14px rgba(255,255,255,.4),0 0 42px rgba(210,110,255,.45),inset 0 0 40px rgba(255,255,255,.05)}
+.sent{font-size:30px;line-height:1.2;text-shadow:0 0 10px rgba(120,210,255,.55)}
+.note{font-size:20px;color:var(--mut)}
+.btn,.btn.alt{background:none;border:0;border-bottom:2px solid rgba(56,214,255,.55);border-radius:0;color:#e6f8ff;font-size:27px;text-transform:uppercase;letter-spacing:.06em;padding:4px 6px;margin:12px 14px 0 0;min-height:44px;text-shadow:0 0 6px #38d6ff,0 0 14px rgba(30,144,255,.85)}
+.btn.alt{border-bottom-color:transparent}
+textarea,input[type=text]{background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.55);color:#fff;border-radius:18px;font-family:inherit;font-size:24px}
+.msg{font-size:23px;text-shadow:0 0 8px currentColor}
+.chip{background:rgba(0,0,0,.2);font-size:22px}
+.tag{background:none;border:2px solid #ff8fca;color:#ffc0e2;text-shadow:0 0 8px rgba(255,70,170,.8);text-transform:uppercase;font-size:18px;padding:0 12px}
+.dots i{border-color:rgba(255,255,255,.75)}.dots i.f{background:#38d6ff;border-color:#38d6ff;box-shadow:0 0 8px #38d6ff}
+.pic{border:3px solid rgba(255,255,255,.7);border-radius:20px;box-shadow:0 0 12px rgba(255,255,255,.3)}.pic.ok{border-color:#5cffb0;box-shadow:0 0 18px #5cffb0}.pic.bad{border-color:#ff7a9c;box-shadow:none}
+.row{border-bottom-color:rgba(255,255,255,.3)}
+#more,#tbtn,#back{padding:2px 20px;font-size:19px;white-space:nowrap}
 </style></head><body><template id="skel"><main>
-<header><h1>Daily Listening</h1><span class="meta" id="meta"></span></header>
+<header><h1 aria-label="Kiki Tore"><span class="k1">KIKI</span><span class="k2">TORE</span></h1><span class="meta" id="meta"></span></header>
 <div id="view">
 <div class="player">
   <button id="play" aria-label="Play phrase"><span class="tri"></span><span class="bars"><i></i><i></i><i></i><i></i></span></button>
   <button class="slow" id="slow" aria-pressed="false">Slow speed</button>
 </div>
 <div class="card" id="task"></div>
-<p class="meta" style="text-align:center;margin-top:18px"><button class="slow" id="more">Practise extra phrases</button></p>
+<p class="meta" style="text-align:center;margin-top:18px"><button class="slow" id="more">Review earlier phrases</button></p>
 </div>
 <div id="teach" style="display:none"></div>
 <p class="meta" style="text-align:center"><button class="slow" id="tbtn" style="display:none">Teacher: edit phrases</button></p>
@@ -72,16 +99,23 @@ $("root").innerHTML=$("skel").innerHTML;
 let P=[];try{P=JSON.parse($("data").textContent)}catch(e){}
 const dayStr=d=>d.toLocaleDateString("en-CA"),today=dayStr(new Date());
 const hash=s=>[...s].reduce((h,c)=>(h*31+c.charCodeAt(0))>>>0,7);
-let store={date:today,n:0,streak:0,last:""};
-try{const s=JSON.parse(localStorage.getItem("dl2")||"null");if(s){store.streak=s.streak||0;store.last=s.last||"";if(s.date===today)store.n=s.n||0}}catch(e){}
+let store={date:today,n:0,streak:0,last:"",seen:[],set:null};
+try{const s=JSON.parse(localStorage.getItem("dl2")||"null");if(s){store.streak=s.streak||0;store.last=s.last||"";store.seen=s.seen||[];if(s.date===today){store.n=s.n||0;store.set=s.set||null}}}catch(e){}
 const save=()=>{try{localStorage.setItem("dl2",JSON.stringify(store))}catch(e){}};
-const N=Math.min(5,P.length);
+const IDS=P.map(p=>hash((p.t||"")+"|"+(p.a||"").length+"|"+(p.a||"").slice(-24)));
 const rng=(a=>()=>{a=(a+0x6D2B79F5)>>>0;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296})(Math.imul(hash(today),2654435761)>>>0);
 const sh=a=>a.map(i=>[rng(),i]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]);
 const PIC=P.map((p,i)=>p.k=="pic"?i:-1).filter(i=>i>=0),TXT=P.map((p,i)=>p.k=="pic"?-1:i).filter(i=>i>=0);
-const D=Math.floor(new Date(today).getTime()/864e5),ord=[...TXT].sort((a,b)=>hash(P[a].t+"|"+a)-hash(P[b].t+"|"+b)),k=Math.min(N-(PIC.length?1:0),ord.length);
-let pool=[...(PIC.length?[PIC[D%PIC.length]]:[]),...Array.from({length:k},(_,j)=>ord[(D*k+j)%ord.length])];pool=pool.concat([...PIC,...TXT].filter(i=>!pool.includes(i)));
-const SET=sh(pool.slice(0,N));
+let SET;
+if(store.set){SET=store.set.map(id=>IDS.indexOf(id)).filter(i=>i>=0)}
+else{
+  const seen=new Set(store.seen),un=a=>a.filter(i=>!seen.has(IDS[i])),pic=sh(un(PIC)),txt=sh(un(TXT));
+  let pool=[...pic.slice(0,1),...txt.slice(0,4)];pool=pool.concat([...pic.slice(1),...txt.slice(4)]);
+  SET=sh(pool.slice(0,5));
+  if(SET.length){store.n=0;store.set=SET.map(i=>IDS[i]);store.seen=store.seen.concat(store.set);save()}
+}
+const N=SET.length;
+const pickReview=()=>{const all=P.map((_,i)=>i),r=all.filter(i=>store.seen.includes(IDS[i])),pl=r.length?r:all;return pl[Math.random()*pl.length|0]};
 /* ===== spelling-tolerant checker ===== */
 const C={"i'll":"i will","i'm":"i am","i've":"i have","you're":"you are","you'll":"you will","you've":"you have","we're":"we are","we'll":"we will","we've":"we have","they're":"they are","they'll":"they will","they've":"they have","he's":"he is","she's":"she is","it's":"it is","he'll":"he will","she'll":"she will","it'll":"it will","that's":"that is","there's":"there is","what's":"what is","let's":"let us","don't":"do not","doesn't":"does not","didn't":"did not","can't":"can not","cannot":"can not","couldn't":"could not","won't":"will not","isn't":"is not","aren't":"are not","wasn't":"was not","weren't":"were not","haven't":"have not","hasn't":"has not","wouldn't":"would not","shouldn't":"should not"};
 function toks(s,loose){
@@ -134,7 +168,7 @@ function win(){
   }
   const last=!practice&&store.n>=N;
   $("fb").insertAdjacentHTML("beforeend",`<button class="btn" id="nx">${practice?"Another phrase":last?"Finish":"Next phrase"}</button>`);
-  $("nx").onclick=()=>{if(practice)pIdx=Math.random()*P.length|0;render()};
+  $("nx").onclick=()=>{if(practice)pIdx=pickReview();render()};
   $("nx").focus();
 }
 function renderPic(p,n){
@@ -149,11 +183,11 @@ function renderPic(p,n){
 function render(){
   won=false;stopAudio();
   $("meta").textContent=(practice?"Practice":"Today")+(store.streak?` · ${store.streak}-day streak`:"");
-  $("more").textContent=practice?"Back to today's phrases":"Practise extra phrases";
+  $("more").textContent=practice?"Back to today's phrases":"Review earlier phrases";
   const el=$("task"),pl=document.querySelector(".player"),n=store.n;
   if(!P.length){pl.style.display="none";$("more").style.display="none";el.innerHTML='<p class="sent">No phrases yet.</p>';return}
   const fin=!practice&&n>=N;pl.style.display=fin?"none":"";
-  if(fin){el.innerHTML=`<p class="sent">All ${N} done for today!</p><p class="note">${store.streak}-day streak. Come back tomorrow for new phrases, or practise some extra ones.</p>`;return}
+  if(fin){el.innerHTML=`${N?`<p class="sent">All ${N} done for today!</p><p class="note">${store.streak}-day streak. Come back tomorrow for new phrases, or review earlier ones.</p>`:`<p class="sent">You've heard every phrase!</p><p class="note">New phrases are coming soon. You can review earlier ones below.</p>`}`;return}
   idx=practice?pIdx:SET[n];const p=P[idx];
   if(p.k=="pic"){renderPic(p,n);return}
   const dots=[...Array(N).keys()].map(i=>`<i class="${i<n?"f":""}"></i>`).join("");
@@ -172,10 +206,10 @@ function render(){
   };
   $("rev").onclick=()=>{$("fb").innerHTML=`<div class="msg">Answer:</div><p class="sent" style="margin-top:6px">${esc(p.t)}</p>`};
 }
-$("more").onclick=()=>{practice=!practice;if(practice)pIdx=Math.random()*P.length|0;render()};
+$("more").onclick=()=>{practice=!practice;if(practice)pIdx=pickReview();render()};
 /* ===== teacher editor (only for people who can edit this page) ===== */
 function buildDoc(){
-  return '<!DOCTYPE html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Daily Listening</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&display=swap"><style id="css">'+$("css").textContent+'</style></head><body><template id="skel">'+$("skel").innerHTML+'</template><div id="root"></div><script type="application/json" id="data">'+JSON.stringify(P).replace(/</g,"\\u003c")+'<\/script><script id="app">'+$("app").textContent+'<\/script></body></html>';
+  return '<!DOCTYPE html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Kiki Tore</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Teko:wght@400;500;600&display=swap"><style id="css">'+$("css").textContent+'</style></head><body><template id="skel">'+$("skel").innerHTML+'</template><div id="root"></div><script type="application/json" id="data">'+JSON.stringify(P).replace(/</g,"\\u003c")+'<\/script><script id="app">'+$("app").textContent+'<\/script></body></html>';
 }
 const tmsg=s=>{$("tm").textContent=s};
 async function publish(){
